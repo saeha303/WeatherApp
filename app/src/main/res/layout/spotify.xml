@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@color/backgroundPlayer">
+    <ImageView
+        android:id="@+id/song_pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/spotify"
+        app:tint="@color/otherPlayer"/>
+    <!-- Device Icon and Name -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp">
+        <TextView
+            android:id="@+id/song_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/otherPlayer"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:text="Title"/>
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:maxLines="2"
+            android:textColor="@color/otherPlayer"
+            android:text="Singer"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:tint="@color/otherPlayer"
+                    android:contentDescription="player"
+                    android:src="@drawable/audio"/>
+                <SeekBar
+                    android:id="@+id/seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="8dp"
+                    android:progressDrawable="@android:color/black"
+                    android:thumbTint="@color/otherPlayer" />
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!-- Playback Controls -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <ImageView
+                android:id="@+id/stopapp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:tint="@color/otherPlayer"
+                android:contentDescription="player"
+                android:src="@drawable/stop"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="4dp">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:tint="@color/otherPlayer"
+                android:src="@drawable/previous"/>
+            <ImageView
+                android:id="@+id/pausesong"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:tint="@color/otherPlayer"
+                android:src="@drawable/play"/>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:tint="@color/otherPlayer"
+                android:src="@drawable/previous"
+                android:rotation="180"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
